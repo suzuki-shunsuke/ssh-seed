@@ -1,0 +1,9 @@
+{
+  "name": "ssh-seed",
+  "version": "1.0.0",
+  "description": "A command line tool to generate ssh authenticaiton keys and add to the ssh agent automatically.",
+  "main": "index.js",
+  "repository": "https://github.com/suzuki-shunsuke/ssh-seed",
+  "author": "Suzuki Shunsuke <suzuki.shunsuke.1989@gmail.com>",
+  "license": "MIT"
+}
