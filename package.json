@@ -6,6 +6,10 @@
   "repository": "https://github.com/suzuki-shunsuke/ssh-seed",
   "author": "Suzuki Shunsuke <suzuki.shunsuke.1989@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "eslint": "eslint",
+    "lint": "eslint '**/*.js'"
+  },
   "dependencies": {
     "eslint": "^3.16.1"
   }
