@@ -7,10 +7,17 @@
   "author": "Suzuki Shunsuke <suzuki.shunsuke.1989@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "test": "mocha *_test/*.js",
+    "mocha": "mocha",
     "eslint": "eslint",
     "lint": "eslint '**/*.js'"
   },
   "dependencies": {
-    "eslint": "^3.16.1"
+    "chai": "^3.5.0",
+    "co": "^4.6.0",
+    "eslint": "^3.16.1",
+    "minimist": "^1.2.0",
+    "mocha": "^3.2.0",
+    "thunkify": "^2.1.2"
   }
 }
