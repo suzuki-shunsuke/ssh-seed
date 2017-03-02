@@ -8,17 +8,17 @@ const constants = require('./lib/constants');
 
 const main = function* (argv) {
   if (argv.help) {
-    return process.stdout.write(yield util.help());
+    return util.writeLn(yield util.help());
   }
   if (argv.version) {
-    return process.stdout.write(yield util.version());
+    return util.writeLn(yield util.version());
   }
   if (argv._.length && argv._[0] === 'init') {
     return yield initCommand();
   }
   const config = yield util.findConf(process.cwd(), constants.CONFIG_FILE_NAME);
   if (!config) {
-    process.stdout.write('Error: ssh-seed.yml is not found');
+    util.writeLn('Error: ssh-seed.yml is not found');
     process.exit(1);
   }
   config.config = util.setDefaultConf(config.config);
