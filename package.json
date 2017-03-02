@@ -7,7 +7,7 @@
   "author": "Suzuki Shunsuke <suzuki.shunsuke.1989@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha *_test/*.js",
+    "test": "npm run lint && mocha *_test/*.js",
     "mocha": "mocha",
     "eslint": "eslint",
     "lint": "eslint '**/*.js'"

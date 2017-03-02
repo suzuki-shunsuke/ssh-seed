@@ -1,9 +1,0 @@
-#!/bin/bash
-
-DIR=`dirname $0`
-
-NAME=$1
-PW=`pwgen 12 1`
-echo $NAME: $PW >> pass
-$DIR/expect-ssh-keygen $NAME $PW
-$DIR/expect-ssh-add $NAME $PW
