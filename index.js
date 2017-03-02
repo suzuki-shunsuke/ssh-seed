@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const co = require('co');
 const util = require('./lib/util');
 const m = require('./lib/main');
