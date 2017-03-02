@@ -36,6 +36,24 @@ After edit the configuration file, run ssh-seed
 $ ssh-seed
 ```
 
+## Configuration options
+
+Please see [comments of the configuration file](template/ssh-seed.yml).
+
+## Configuration file search
+
+When the ssh-seed command is run, the configuration file `ssh-seed.yml`
+is searched from the current directory to the root directory in order.
+If it is found once, the search is stopped.
+If it is not found, an error is occured.
+
+## ssh-seed.pass.yml
+
+When the ssh-seed command generate the authenticaiton keys,
+at the same time passphrases of them are generated and written
+in the ssh-seed.pass.yml.
+The ssh-seed.pass.yml is generated in the directory where ssh-seed.yml is.
+
 ## Contributing
 
 1. Fork (https://github.com/suzuki-shunsuke/ssh-seed/fork)
