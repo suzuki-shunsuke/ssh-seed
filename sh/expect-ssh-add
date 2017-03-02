@@ -1,0 +1,23 @@
+#!/usr/bin/expect
+
+set FILE [lindex $argv 0]
+set PW [lindex $argv 1]
+set OPTIONS [lindex $argv 2]
+
+set timeout 5
+
+log_user 0
+spawn ssh-add $OPTIONS $FILE
+expect {
+    ":" {
+        send -- "${PW}\n"
+    }
+}
+
+expect {
+    -regexp "\n.*\r" {
+        log_user 1
+        send "exit\n"
+        exit 0
+    }
+}

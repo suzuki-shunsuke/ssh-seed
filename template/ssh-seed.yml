@@ -1,0 +1,40 @@
+passphrase:
+  # Available options and default values
+  # https://github.com/brendanashworth/generate-password#available-options
+  # If you change the option values, erase the comment out.
+  # length: 12
+  # numbers: true
+  # symbols: true
+  # uppercase: false
+  # exclude:
+  # strict: true
+
+  # options of pwgen command
+  # default is an empty string
+  # please refer to pwgen man page
+  # options: -c
+ssh_add:
+  # whether add authentifications to the ssh agent
+  # default is false
+  # default: true
+
+  # options of ssh-add command
+  # default is an empty string
+  # please refer to ssh-add man page
+  # options: -K
+ssh_keygen:
+  # options of ssh-keygen command
+  # default is an empty string
+  # please refer to ssh-keygen man page
+  # options: -t rsa
+
+# authentification key's paths
+# absolute path or
+# relative path from the configuration file's parent directory
+# you can decide whether each authentification files is added to the ssh agent by the `ssh_add` option.
+# keys:
+#   ~/foo:
+#   /Users/foo/zoo:
+#   hoge:
+#   zoo:
+#     ssh_add: true
