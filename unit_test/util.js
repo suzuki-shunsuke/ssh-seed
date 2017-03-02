@@ -2,7 +2,7 @@ const chai = require('chai');
 const mocha = require('mocha');
 const co = require('co');
 
-const util = require('../lib/util.js');
+const util = require('../lib/util');
 
 const describe = mocha.describe.bind(mocha);
 const it = mocha.it.bind(mocha);

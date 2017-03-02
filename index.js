@@ -1,7 +1,8 @@
 const co = require('co');
-const util = require('./lib/util.js');
-
-const CONFIG_FILE_NAME = 'ssh-seed.yml';
+const util = require('./lib/util');
+const m = require('./lib/main');
+const initCommand = require('./lib/init.cmd');
+const constants = require('./lib/constants');
 
 const main = function* (argv) {
   if (argv.help) {
@@ -10,11 +11,13 @@ const main = function* (argv) {
   if (argv.version) {
     return process.stdout.write(yield util.version());
   }
-  const config = (yield util.findConf(process.cwd(), CONFIG_FILE_NAME)) || {
-    keys: [],
-  };
-  for (const key of config.keys) {
-    util.execScript(key, () => {});
+  if (argv._.length && argv._[0] === 'init') {
+    return yield initCommand();
+  }
+  const config = yield util.findConf(process.cwd(), constants.CONFIG_FILE_NAME);
+  config.config = util.setDefaultConf(config.config);
+  for (const key in config.config.keys) {
+    yield m.main(key, config);
   }
 };
 
