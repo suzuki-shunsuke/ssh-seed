@@ -9,15 +9,15 @@ log_user 0
 spawn ssh-keygen -t rsa
 expect {
     "id_rsa):" {
-        send "${FILE}\n"
+        send -- "${FILE}\n"
         exp_continue
     }
     "passphrase):" {
-        send "${PW}\n"
+        send -- "${PW}\n"
         exp_continue
     }
     "again:" {
-        send "${PW}\n"
+        send -- "${PW}\n"
     }
 }
 

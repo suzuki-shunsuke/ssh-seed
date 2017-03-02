@@ -9,7 +9,7 @@ log_user 0
 spawn ssh-add $FILE
 expect {
     ":" {
-        send "${PW}\n"
+        send -- "${PW}\n"
     }
 }
 
