@@ -18,7 +18,7 @@ const main = function* (argv) {
   }
   const config = yield util.findConf(process.cwd(), constants.CONFIG_FILE_NAME);
   if (!config) {
-    util.writeLn('Error: ssh-seed.yml is not found');
+    util.writeLn(`Error: ${constants.CONFIG_FILE_NAME} is not found`);
     process.exit(1);
   }
   config.config = util.setDefaultConf(config.config);
