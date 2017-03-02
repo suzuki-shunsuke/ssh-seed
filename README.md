@@ -4,6 +4,9 @@ A command line tool to generate ssh authenticaiton keys and add them to the ssh 
 
 ## Description
 
+It is boring and tired to generate many ssh passphrases and authenticaiton keys and add them to the ssh agent.
+This tool executes that task automatically.
+
 ## Requirements
 
 * ssh-add
