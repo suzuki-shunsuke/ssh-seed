@@ -1,7 +1,7 @@
-pwgen:
+passphrase:
   # passphrase length
   # default is 12
-  # pass_size: 12
+  # length: 12
 
   # options of pwgen command
   # default is an empty string
