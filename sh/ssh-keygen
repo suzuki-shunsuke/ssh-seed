@@ -1,0 +1,7 @@
+#!/bin/bash
+
+FILE=$1
+PW=$2
+OPTIONS=$3
+
+ssh-keygen $OPTIONS -f $FILE -N $PW
