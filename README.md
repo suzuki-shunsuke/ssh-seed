@@ -1,5 +1,7 @@
 # ssh-seed
 
+[[Build Status](https://travis-ci.org/suzuki-shunsuke/ssh-seed.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ssh-seed)!
+
 A command line tool to generate ssh authenticaiton keys and add them to the ssh agent automatically.
 
 ## Description
