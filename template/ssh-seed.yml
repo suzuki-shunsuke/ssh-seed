@@ -27,11 +27,6 @@ ssh_keygen:
   # default is an empty string
   # please refer to ssh-keygen man page
   # options: -t rsa
-crypto:
-  # whether encrypto
-  # default: true
-  # algorithm
-  # algorithm: 
 
 # authentification key's paths
 # absolute path or
