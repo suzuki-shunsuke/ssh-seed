@@ -10,6 +10,16 @@ A command line tool to generate ssh authenticaiton keys and add them to the ssh 
 It is boring and tiring to generate many ssh passphrases and authenticaiton keys and add them to the ssh agent.
 This tool executes that task automatically.
 
+## Demo (Gif Animation)
+
+https://giphy.com/gifs/demo-ssh-seed-xUPGcnBZ18P2IchhoQ
+
+This git animation shows
+
+1. Install
+2. Create a configuration file skelton
+3. Create multiple passphrases and authenticaiton keys and add keys to the ssh agent by one command (not interactive)
+
 ## Requirements
 
 * ssh-add
