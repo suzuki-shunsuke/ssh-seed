@@ -2,8 +2,6 @@
 
 const co = require('co');
 const util = require('./lib/util');
-const runCommand = require('./lib/run.cmd');
-const initCommand = require('./lib/init.cmd');
 const constants = require('./lib/constants');
 
 const main = function* (argv) {
@@ -13,8 +11,9 @@ const main = function* (argv) {
   if (argv.version) {
     return util.writeLn(yield util.version());
   }
-  if (argv._.length && argv._[0] === 'init') {
-    return yield initCommand();
+  const cmd = util.getCommand(argv._);
+  if (cmd.name === 'init') {
+    return yield cmd.func();
   }
   const config = yield util.findConf(process.cwd(), constants.CONFIG_FILE_NAME);
   if (!config) {
@@ -23,7 +22,7 @@ const main = function* (argv) {
   }
   config.config = util.setDefaultConf(config.config);
   for (const key in config.config.keys) {
-    yield runCommand(key, config);
+    yield cmd.func(key, config);
   }
 };
 

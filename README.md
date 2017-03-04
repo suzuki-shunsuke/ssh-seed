@@ -35,17 +35,32 @@ $ npm i -g ssh-seed
 
 ## Usage
 
-Create the configuration file.
+To see All available options and subcommand,
+please see [here](HELP).
+
+1. Create the configuration file.
 
 ```
 $ ssh-seed init
 ```
 
-After edit the configuration file, run ssh-seed
+2. After edit the configuration file, run ssh-seed
 
 ```
 $ ssh-seed
 ```
+
+Running ssh-seed with no command will run the 'run' subcommand.
+The 'run' subcommand creates passphrases and authentication keys and adds keys to ssh-agent.
+
+If you want only to create passphrases and authentication keys but not to add keys to ssh-agent,
+use the 'keygen' command.
+
+```
+$ ssh-seed keygen
+```
+
+The 'keygen' command was added in v1.1.0 .
 
 ## Configuration options
 
