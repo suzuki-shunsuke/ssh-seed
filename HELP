@@ -1,1 +1,15 @@
-usage: ssh-seed [--version] [--help]
+
+  Usage: ssh-seed [options] [command]
+
+
+  Commands:
+
+    init        Create a configuration file.
+    run         Create passphrases and authentication keys and add keys to ssh-agent.
+                Running ssh-seed with no command will run ssh-seed run.
+
+
+  Options:
+
+    -h, --help     output usage information
+    -v, --version  output the version number
