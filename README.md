@@ -65,6 +65,11 @@ at the same time passphrases of them are generated and written
 in the ssh-seed.pass.yml.
 The ssh-seed.pass.yml is generated in the directory where ssh-seed.yml is.
 
+## Change Log
+
+Please see [here](CHANGELOG.md).
+This change log is generated automatically with [standard-version](https://github.com/conventional-changelog/standard-version).
+
 ## Contributing
 
 1. Fork (https://github.com/suzuki-shunsuke/ssh-seed/fork)
