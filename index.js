@@ -2,7 +2,7 @@
 
 const co = require('co');
 const util = require('./lib/util');
-const m = require('./lib/main');
+const runCommand = require('./lib/run.cmd');
 const initCommand = require('./lib/init.cmd');
 const constants = require('./lib/constants');
 
@@ -23,7 +23,7 @@ const main = function* (argv) {
   }
   config.config = util.setDefaultConf(config.config);
   for (const key in config.config.keys) {
-    yield m.main(key, config);
+    yield runCommand(key, config);
   }
 };
 
