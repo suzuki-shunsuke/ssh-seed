@@ -35,7 +35,8 @@ const main = function* (argv) {
   }
 
   for (const key in config.config.keys) {
-    yield cmd.func(key, config, passFilePath, passphrases);
+    const filePath = path.isAbsolute(key) ? key : path.join(config.path, key);
+    yield cmd.func(key, filePath, config, passFilePath, passphrases);
   }
 };
 
