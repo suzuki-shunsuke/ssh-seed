@@ -14,7 +14,7 @@ passphrase:
   # please refer to pwgen man page
   # options: -c
 ssh_add:
-  # whether add authentifications to the ssh agent
+  # whether add authentications to the ssh agent
   # default is false
   # default: true
 
@@ -28,10 +28,10 @@ ssh_keygen:
   # please refer to ssh-keygen man page
   # options: -t rsa
 
-# authentification key's paths
+# authentication key's paths
 # absolute path or
 # relative path from the configuration file's parent directory
-# you can decide whether each authentification files is added to the ssh agent by the `ssh_add` option.
+# you can decide whether each authentication files is added to the ssh agent by the `ssh_add` option.
 # keys:
 #   ~/foo:
 #   /Users/foo/zoo:
