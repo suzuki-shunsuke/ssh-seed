@@ -4,7 +4,7 @@ const exec = require('child_process').exec;
 
 const expect = chai.expect.bind(chai);
 
-const mainFile = path.join(__dirname, '../index.js');
+const mainFile = path.join(__dirname, '../index');
 
 /**
  * Compare the stdout of the command and the given string
