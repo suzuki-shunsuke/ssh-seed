@@ -7,8 +7,10 @@
     init        Create a configuration file.
     run         Create passphrases and authentication keys and add keys to ssh-agent.
                 Running ssh-seed with no command will run ssh-seed run.
+                run = keygen + add
     keygen      Create passphrases and authentication keys, but don't add keys to ssh-agent.
                 The ssh_add option is ignored.
+    add         Add existing keys to ssh-agent, but don't create new passphrases and authentication keys.
 
 
   Options:

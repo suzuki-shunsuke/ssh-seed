@@ -62,6 +62,16 @@ $ ssh-seed keygen
 
 The 'keygen' command was added in v1.1.0 .
 
+If you want only to add existing keys to ssh-agent
+but not to create new passphrases and authentication keys,
+use the 'add' command.
+
+```
+$ ssh-seed add
+```
+
+The 'add' command was added in v1.2.0 .
+
 ## Configuration options
 
 Please see [comments of the configuration file](template/ssh-seed.yml).
