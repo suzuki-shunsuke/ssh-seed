@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/suzuki-shunsuke/ssh-seed/compare/v1.2.1...v1.3.0) (2017-03-05)
+
+
+### Features
+
+* Output a warning when it is failed to run ssh-keygen ([1389abd](https://github.com/suzuki-shunsuke/ssh-seed/commit/1389abd))
+* Output a warning when the given authentication path is not a file ([2d4679c](https://github.com/suzuki-shunsuke/ssh-seed/commit/2d4679c))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/suzuki-shunsuke/ssh-seed/compare/v1.2.0...v1.2.1) (2017-03-05)
 
