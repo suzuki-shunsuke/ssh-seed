@@ -11,11 +11,14 @@
   "license": "MIT",
   "scripts": {
     "test": "npm run lint && mocha *_test/*.js",
+    "setup": "yarn",
     "mocha": "mocha",
     "eslint": "eslint",
     "lint": "eslint '**/*.js'",
     "commitmsg": "validate-commit-msg",
-    "release": "git checkout master && git pull origin master && standard-version"
+    "standard-version": "standard-version",
+    "setup-release": "./setup-release.sh",
+    "release": "cd release; git push --follow-tags origin master; npm publish"
   },
   "dependencies": {
     "co": "^4.6.0",

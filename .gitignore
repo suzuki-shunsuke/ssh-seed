@@ -1,4 +1,7 @@
+release
 node_modules
 npm-debug.log
 *.pub
 *.bak
+/ssh-seed.pass.yml
+/ssh-seed.yml
