@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/suzuki-shunsuke/ssh-seed/compare/v1.4.1...v1.5.0) (2017-03-05)
+
+
+### Features
+
+* Add the "--reqexp" option ([b2b4ca0](https://github.com/suzuki-shunsuke/ssh-seed/commit/b2b4ca0))
+
+
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/suzuki-shunsuke/ssh-seed/compare/v1.4.0...v1.4.1) (2017-03-05)
 
