@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.6.1"></a>
+## [1.6.1](https://github.com/suzuki-shunsuke/ssh-seed/compare/v1.6.0...v1.6.1) (2017-03-06)
+
+
+### Performance Improvements
+
+* Write passphrases in the pass file one time only ([be82456](https://github.com/suzuki-shunsuke/ssh-seed/commit/be82456))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/suzuki-shunsuke/ssh-seed/compare/v1.5.1...v1.6.0) (2017-03-06)
 
