@@ -19,6 +19,15 @@ const main = function* (argv) {
   if (cmd.name === 'init') {
     return yield cmd.func();
   }
+
+  let regexp = false;
+  try {
+    regexp = argv.regexp ? new RegExp(argv.regexp) : false;
+  } catch (e) {
+    util.writeErrLn(`ssh-seed:Error: the value of the regexp option "${argv.regexp}" is invalid for the regular expression.`);
+    process.exit(1);
+  }
+
   const config = yield util.findConf(process.cwd(), constants.CONFIG_FILE_NAME);
   if (!config) {
     util.writeErrLn(`ssh-seed:Error: ${constants.CONFIG_FILE_NAME} is not found.`);
@@ -34,18 +43,28 @@ const main = function* (argv) {
     // if pass file is not found, do nothing
   }
 
-  let regexp = false;
+  const state = {passUpdated: false};
   try {
-    regexp = argv.regexp ? new RegExp(argv.regexp) : false;
-  } catch (e) {
-    util.writeErrLn(`ssh-seed:Error: the value of the regexp option "${argv.regexp}" is invalid for the regular expression.`);
-    process.exit(1);
-  }
-
-  for (const key in config.config.keys) {
-    if (regexp && !regexp.test(key)) { continue; }
-    const filePath = path.isAbsolute(key) ? key : path.join(config.path, key);
-    yield cmd.func(key, filePath, config, passFilePath, passphrases);
+    for (const key in config.config.keys) {
+      // filter with the regular expression
+      if (regexp && !regexp.test(key)) { continue; }
+      const filePath = path.isAbsolute(key) ? key : path.join(config.path, key);
+      if (cmd.name == 'add') {
+        yield cmd.func(key, filePath, config, passphrases);
+      } else {
+        yield cmd.func(key, filePath, config, passphrases, state);
+      }
+    }
+  } finally {
+    if (state.passUpdated) {
+      try {
+        yield fs.writeFile(passFilePath, yaml.safeDump(passphrases));
+      } catch (_) {
+        // it is failed to write in the pass file
+        util.writeErrLn('ssh-seed:Error: it was failed to write passphrases in the pass file.');
+        process.exit(1);
+      }
+    }
   }
 };
 
