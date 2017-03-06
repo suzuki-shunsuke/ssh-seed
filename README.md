@@ -14,7 +14,7 @@ This tool executes that task automatically.
 
 https://giphy.com/gifs/demo-ssh-seed-xUPGcnBZ18P2IchhoQ
 
-This git animation shows
+This gif animation shows
 
 1. Install
 2. Create a configuration file skelton
