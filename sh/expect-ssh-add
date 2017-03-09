@@ -5,6 +5,7 @@ set PW [lindex $argv 1]
 set OPTIONS [lindex $argv 2]
 
 set timeout 5
+set Prompt "\[#$%>\]"
 
 log_user 0
 spawn ssh-add $OPTIONS $FILE
@@ -15,9 +16,7 @@ expect {
 }
 
 expect {
-    -regexp "\n.*\r" {
-        log_user 1
-        send "exit\n"
+    -glob "${Prompt}" {
         exit 0
     }
 }
