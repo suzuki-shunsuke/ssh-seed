@@ -38,7 +38,17 @@ const main = function* (argv) {
   const passFilePath = path.join(config.path, constants.PASS_FILE_NAME);
   let passphrases = {};
   try {
-    passphrases = yaml.safeLoad(yield fs.readFile(passFilePath));
+    const text = yield fs.readFile(passFilePath);
+    try {
+      passphrases = yaml.safeLoad(text);
+    } catch (e) {
+      util.writeErrLn([
+        `ssh-seed:Error: Invalid YAML syntax: ${passFilePath}`,
+        `reason: ${e.reason}`,
+        `message: ${e.message}`
+      ].join('\n'));
+      process.exit(1);
+    }
   } catch (e) {
     // if pass file is not found, do nothing
   }
