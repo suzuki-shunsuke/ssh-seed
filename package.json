@@ -16,9 +16,7 @@
     "eslint": "eslint",
     "lint": "eslint '**/*.js'",
     "commitmsg": "validate-commit-msg",
-    "standard-version": "standard-version",
-    "setup-release": "./setup-release.sh",
-    "release": "cd release; git push --follow-tags origin master; npm publish"
+    "standard-version": "standard-version"
   },
   "dependencies": {
     "co": "^4.6.0",

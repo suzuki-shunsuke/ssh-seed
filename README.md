@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/suzuki-shunsuke/ssh-seed.svg?branch=master)](https://travis-ci.org/suzuki-shunsuke/ssh-seed)
 [![npm version](https://badge.fury.io/js/ssh-seed.svg)](https://badge.fury.io/js/ssh-seed)
+[![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/ssh-seed.svg)](https://github.com/suzuki-shunsuke/ssh-seed)
 
 A command line tool to generate ssh authenticaiton keys and add them to the ssh agent automatically.
 
@@ -22,10 +23,8 @@ This gif animation shows
 
 ## Requirements
 
-* ssh-add
-* ssh-keygen
 * expect
-* node
+* Node.js
 
 ## Install
 
@@ -50,27 +49,27 @@ $ ssh-seed init
 $ ssh-seed
 ```
 
-Running ssh-seed with no command will run the 'run' subcommand.
-The 'run' subcommand creates passphrases and authentication keys and adds keys to ssh-agent.
+Running ssh-seed with no command will run the `run` subcommand.
+The `run` subcommand creates passphrases and authentication keys and adds keys to ssh-agent.
 
 If you want only to create passphrases and authentication keys but not to add keys to ssh-agent,
-use the 'keygen' command.
+use the `keygen` command.
 
 ```
 $ ssh-seed keygen
 ```
 
-The 'keygen' command was added in v1.1.0 .
+The `keygen` command was added in v1.1.0 .
 
 If you want only to add existing keys to ssh-agent
 but not to create new passphrases and authentication keys,
-use the 'add' command.
+use the `add` command.
 
 ```
 $ ssh-seed add
 ```
 
-The 'add' command was added in v1.2.0 .
+The `add` command was added in v1.2.0 .
 
 ## Configuration options
 
